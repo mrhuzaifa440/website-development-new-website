@@ -4,31 +4,111 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Website Development</title>
-    <link rel="canonical" href="index.html" />
-    <meta name="description" content="Experience Serenity at Abbey: Your Peaceful Getaway Awaits!" />
-    <meta name="keywords" content="Website Development" />
+    <title>What does an investment service do?</title>
+    <link rel="canonical" href="what-does-an-investment-service-do.html" />
+
+    <meta name="description" content="Discover what an investment service does and how it can help you achieve your financial goals. This blog post explores the various functions of investment services, from portfolio management to financial planning, and offers insights on choosing the right service for your needs. Learn how these professionals can guide you in making informed investment decisions." />
+    <meta name="keywords" content="What does an investment service do?" />
     <link rel="icon" href="favicon.png" type="image/x-icon" />
 
 
     <!-- Boostrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <!-- Owl Carousel CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
-
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- Custom (Base) CSS -->
     <link rel="stylesheet" href="home/css/custom.css">
-    
+    <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is an investment service?","acceptedAnswer":{"@type":"Answer","text":"An investment service is a professional service that assists individuals and institutions in managing their investment portfolios, providing advice on buying and selling financial assets, and helping clients achieve their financial goals."}},{"@type":"Question","name":"How do investment services ensure compliance with regulations?","acceptedAnswer":{"@type":"Answer","text":"Investment services operate under a regulatory framework that includes compliance and oversight by regulatory bodies to ensure they adhere to laws and regulations designed to protect investors and maintain the integrity of financial markets."}},{"@type":"Question","name":"What factors are considered when assessing investment risk?","acceptedAnswer":{"@type":"Answer","text":"Investment risk is assessed based on various factors, including market conditions, historical performance, economic indicators, and individual risk tolerance, which helps in determining suitable investment strategies."}},{"@type":"Question","name":"What is the difference between fundamental and technical analysis?","acceptedAnswer":{"@type":"Answer","text":"Fundamental analysis involves evaluating a company's financial health and market position to determine its investment potential, while technical analysis focuses on statistical trends and price movements in the market to forecast future performance."}},{"@type":"Question","name":"How can I determine my risk tolerance for investments?","acceptedAnswer":{"@type":"Answer","text":"Determining your risk tolerance involves assessing your financial situation, investment goals, time horizon, and emotional capacity to handle market fluctuations, often through questionnaires or discussions with financial advisors."}}]}</script>
     <style>
-        header .header-content h2 {
-            color: var(--base-50) !important;
+        .section-content a {
+            color: var(--base-primary);
         }
         .gradient-card:hover .btn-learn .img-fluid, .services-carousel .owl-item.active.center .gradient-card .btn-learn .img-fluid{
             content:url("home/media/imgs/learn_more_btn_normal.png");
         }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 200000; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content, #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {-webkit-transform:scale(0)}
+            to {-webkit-transform:scale(1)}
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0)}
+            to {transform:scale(1)}
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px){
+            .modal-content {
+                width: 100%;
+            }
+        }
     </style>
+
 </head>
 
 <body>
@@ -93,8 +173,8 @@
     </div>
 </section>
 
-<!-- Header (full) with Top Navbar -->
-<header id="header" class="position-relative min-vh-100 header "
+<!-- Header (sm) with Top Navbar -->
+<header id="header" class="position-relative header-sm"
         style="background: url(banner_image.png) no-repeat center;background-size: cover;background-attachment: fixed;">
     <!-- Top Navbar -->
     <nav class="navbar bg-transparent sticky-top top-navbar navbar-dark">
@@ -109,7 +189,7 @@
 
             <!-- Mobile Menu Icons -->
             <div class="d-lg-none mobile-call-menu-icons">
-                <a href="tel:" class="text-decoration-none" title="Contact Number">
+                <a href="tel:+" class="text-decoration-none" title="Contact Number">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                          fill="currentColor">
                         <path
@@ -167,13 +247,13 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#serviceAreasMenu" class="nav-link ps-3 fw-semibold dropdown-toggle"
+                            <a href="#servicesAreasMenu" class="nav-link ps-3 fw-semibold dropdown-toggle"
                                data-bs-toggle="collapse" role="button" aria-expanded="false"
-                               aria-controls="serviceAreasMenu">
+                               aria-controls="servicesAreasMenu">
                                 Service Areas
                             </a>
 
-                            <ul class="collapse p-0 py-2 " id="serviceAreasMenu">
+                            <ul class="collapse p-0 py-2 " id="servicesAreasMenu">
                                 
                             </ul>
                         </li>
@@ -237,22 +317,22 @@
             <div class="ms-auto d-none d-lg-block">
                 <ul class="navbar-nav hstack gap-3 gap-lg-4 navbar-desktop-menu">
                     <li class="nav-item ">
-                        <a href="index.html" class="nav-link fw-medium active">Home</a>
+                        <a href="index.html" class="nav-link fw-medium {{home_active}}">Home</a>
                     </li>
                     <li class="nav-item custom-nav-item ">
-                        <a href="services.html" class="nav-link fw-medium {{service_active}}">Services</a>
+                        <a href="services.html" class="nav-link fw-medium {{service_active}}" >Services</a>
                         <div class="custom-dropdown slideup py-2 rounded-3 bg-primary">
                             <a class="custom-nav-link dropdown-item ps-4 py-1" href="investment-services.html">Investment Services</a>
                         </div>
                     </li>
                     <li class="nav-item custom-nav-item ">
-                        <a href="javascript:void(0)" class="nav-link fw-medium {{service_area_active}}">Service Areas</a>
+                        <a href="javascript:void(0)" class="nav-link fw-medium {{service_area_active}}" >Service Areas</a>
                         <div class="custom-dropdown slideup py-2 rounded-3 bg-primary">
                             
                         </div>
                     </li>
                     <li class="nav-item ">
-                        <a href="blog.html" class="nav-link fw-medium {{blog_active}}">Blog</a>
+                        <a href="blog.html" class="nav-link fw-medium active">Blog</a>
                     </li>
                     <li class="nav-item " style="display: ">
                         <a href="aboutus.html" class="nav-link fw-medium {{about_us_active}}">About Us</a>
@@ -261,7 +341,7 @@
                         <a href="contact.html" class="nav-link fw-medium {{contact_active}}">Contact Us</a>
                     </li>
                     <li class="nav-item" style="display: none">
-                        <a href="tel:" class="btn btn-sm btn-primary fw-medium px-2">
+                        <a href="tel:" title="Contact Number" class="btn btn-sm btn-primary fw-medium px-2">
                             Call <span class="d-none d-xl-inline-block"></span>
                             <span class="d-xl-none">Now</span>
                         </a>
@@ -274,560 +354,56 @@
     <!-- Header Content -->
     <div class="card-img-overlay px-3 text-center header-content">
         <div class="vstack justify-content-center align-items-center h-100">
+            <h1 class="display-5 text-capitalize fw-bold"><span>What does an investment service do?</span></h1>
             <div class="row justify-content-center mt-5 mt-md-0">
                 <div class="col-12 col-md-10 col-lg-8 col-xl-6">
-                    <h1 class="display-5 fw-bold head-title"><span>Website Development</span></h1>
-                    <h2 class="display-5 fw-bold head-tagline">Experience Serenity at Abbey: Your Peaceful Getaway Awaits!</h2>
 
                     <p class="mt-4 mb-0 head-tagline">
-                         Abbey offers a serene retreat where you can escape the hustle and bustle of daily life. Immerse yourself in our welcoming atmosphere, designed to promote relaxation and connection with nature.
+                        
                     </p>
                 </div>
             </div>
 
-            <div class="my-5 mb-md-0 w-100 " style="display: none">
-                <a href="tel:" title="Contact Number" class="btn btn-sm btn-primary px-3 d-block d-md-inline-block">
-                    Call 
-                </a>
-            </div>
+            <!--            <nav aria-label="breadcrumb" class="fw-medium">-->
+            <!--                <ol class="breadcrumb mb-0">-->
+            <!--                    -->
+            <!--                    <li class="breadcrumb-item">-->
+            <!--                        <a href="javascript:void(0)" class="text-decoration-none">Home</a>-->
+            <!--                    </li>-->
+
+            <!--                    <li class="breadcrumb-item active" aria-current="page">Services</li>-->
+            <!--                </ol>-->
+            <!--            </nav>-->
         </div>
     </div>
 </header>
 
 
-
-<!-- Services -->
-<section id="services-section" class="bg-section-dark px-3 py-5 ">
+<!-- Service Details -->
+<section id="service-details" class="bg-section-dark px-3 py-5">
     <header class="py-2 border-bottom mb-4" style="display: none">
-        <div class="ql-editor p-4 " id="sitewide-header">
+        <div class="ql-editor py-4 " id="sitewide-header">
             
         </div>
     </header>
-
-    <!-- Heading Row-->
-
-    <div class="py-2 border-bottom mb-2" style="display: none">
-        <div class="ql-editor ">
-            
-        </div>
-    </div>
-    <div class="container-md px-0 px-md-3 py-md-5 cards-container">
-        <div class="container-sm mb-5 text-center section-content">
-            <small class="badge py-2 rounded-pill pill-light text-uppercase fw-medium">Services</small>
-        </div>
-        <div class="mt-5">
-            <div class="owl-carousel services-carousel">
-                <div class="card h-100 service-card gradient-card is-hoverable border-0">
-    <img src="investment-services-309578.jpg?key=Ewj79D" class="img-fluid rounded"
-         alt="Investment Services">
-
-    <div class="card-body text-center">
-        <h3 class="fs-5 card-title my-2 mb-3 fw-semibold text-capitalize">Investment Services</h3>
-
-        <p class="my-2 px-3">
-            Website Development specializes in creating tailored digital solutions for Investment Services, focusing on enhancing user experience and optimizing online presence. Our team of skilled developers and designers collaborates closely with financial ins......
-        </p>
-
-        <div style="display:flex; justify-content: center" class="btn-learn">
-            <a href="investment-services.html" class="my-2 px-3">
-                <img src="home/media/imgs/learn_more_btn_hover.png" style="width:120px"
-                     class="img-fluid rounded"
-                     alt="Learn more about Investment Services">
-            </a>
-        </div>
-    </div>
-</div>
-            </div>
-        </div>
-
-        <div class="mt-5 text-center">
-            <a href="services.html" class="btn btn-sm btn-primary d-block d-md-inline-block px-3">
-                View All Services
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Why Choose Us? -->
-<section id="features-section" class="bg-section-light px-3 py-5">
     <div class="container-md px-0 px-md-3 py-md-5">
-        <div class="container-sm mb-5 text-center section-content">
-            <small class="badge py-2 rounded-pill pill-dark text-uppercase fw-medium">Features</small>
-
-            <h2 class="text-capitalize my-3">
-                Why Choose Us?
-            </h2>
-
-            <p>
-                At Abbey Website Development, we stand out as your premier choice for all your web development needs. Our team of experienced professionals combines creativity with cutting-edge technology to deliver exceptional websites that not only look stunning but also perform flawlessly. We are dedicated to understanding your unique business goals and crafting tailored solutions to meet them. With a commitment to customer satisfaction, timely delivery, and ongoing support, we ensure that your online presence is not just built but optimized for success. Choosing Abbey means partnering with a team that prioritizes your vision and is passionate about turning it into reality. Let us help you elevate your brand and drive results through a strong online platform.
-            </p>
-        </div>
-
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 mt-5">
-            <div class="col">
-    <div class="card h-100 feature-card bg-transparent text-center rounded-4 border-0">
-        <div class="card-body py-md-5">
-            <div class="bg-primary card-icon hstack justify-content-center mx-auto rounded-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                     class="bi bi-people" viewBox="0 0 576 512">
-                    <path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/>
-
-                </svg>
-            </div>
-
-            <h3 class="fs-5 card-title mt-5 mb-4 fw-semibold text-capitalize">
-                Exceptional Customer Service
-            </h3>
-
-            <p class="px-3">
-                 Our dedicated team is committed to providing prompt and personalized support to ensure your needs are always met.
-            </p>
-        </div>
-    </div>
-</div><div class="col">
-    <div class="card h-100 feature-card bg-transparent text-center rounded-4 border-0">
-        <div class="card-body py-md-5">
-            <div class="bg-primary card-icon hstack justify-content-center mx-auto rounded-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                     class="bi bi-people" viewBox="0 0 576 512">
-                    <path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/>
-
-                </svg>
-            </div>
-
-            <h3 class="fs-5 card-title mt-5 mb-4 fw-semibold text-capitalize">
-                High-Quality Products
-            </h3>
-
-            <p class="px-3">
-                 We offer a carefully curated selection of top-tier products that have been tested for excellence and durability.
-            </p>
-        </div>
-    </div>
-</div><div class="col">
-    <div class="card h-100 feature-card bg-transparent text-center rounded-4 border-0">
-        <div class="card-body py-md-5">
-            <div class="bg-primary card-icon hstack justify-content-center mx-auto rounded-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                     class="bi bi-people" viewBox="0 0 576 512">
-                    <path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/>
-
-                </svg>
-            </div>
-
-            <h3 class="fs-5 card-title mt-5 mb-4 fw-semibold text-capitalize">
-                Competitive Pricing
-            </h3>
-
-            <p class="px-3">
-                 Our pricing strategy is designed to offer you the best value for your investment while maintaining the highest standards of quality and service.
-            </p>
-        </div>
+        <div class="row g-4 section-content">
+            <div class="container-md p-0 pt-sm-3 p-md-3 p-lg-5 position-relative">
+    <div class=" top-100 start-50 w-100">
+        <img src="what-does-an-investment-service-do-309583.jpg?key=ExTFKr" alt="What does an investment service do?" class="rounded-4 w-100">
     </div>
 </div>
-
-        </div>
-
-        <!--        <div class="mt-5 text-center" style="display: none">-->
-        <!--            <a href="#quotation-section" class="btn btn-sm btn-outline d-block d-md-inline-block px-3">Request a-->
-        <!--                Quote</a>-->
-        <!--        </div>-->
-    </div>
-</section>
-
-<!-- About Us -->
-<section id="about-us-section" class="bg-section-dark p-md-5" style="display: ">
-    <div class="my-md-5">
-        <div class="px-3 py-5 p-md-5 pt-md-0">
-            <div class="row g-3">
-                <div class="col-12 col-xl-7 section-content">
-                    <div class="text-start mt-xl-5 mb-5">
-                        <small class="badge py-2 rounded-pill pill-light text-uppercase fw-medium">About Us</small>
-
-                        <h2 class="text-capitalize my-3">
-                             A unique blend of tranquility and community, tailored for rejuvenating experiences.  
-                        </h2>
-
-                        <p class="mb-5">
-                            Welcome to Website Development, your trusted partner for cutting-edge digital solutions based in the heart of Abbey. Our mission is to empower businesses of all sizes with tailor-made websites that not only reflect their unique brand identity but also engage customers effectively. With years of experience in the industry, our dedicated team combines technical expertise with creative flair to craft user-friendly, visually stunning, and responsive websites that rise above the competition. We understand that a website is more than just a digital presence; it is an integral part of your business growth strategy.
-
-At Website Development, we pride ourselves on our commitment to exceptional customer service and our collaborative approach to every project. We believe that the foundation of a successful website lies in listening to our clients and understanding their specific needs and goals. From small startups to established enterprises, we take the time to build lasting relationships and guide you through the entire development process—from concept to launch and beyond. Your success is our success, and we are excited to help you navigate the ever-evolving digital landscape with confidence.
-                        </p>
-
-                        <div class="d-flex flex-column gap-4 bullet-points">
-                            <div class="hstack gap-4">
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                         viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                                d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z"
-                                                fill="currentColor" />
-                                        <path
-                                                d="M10.7402 16.2802C10.5502 16.2802 10.3602 16.2102 10.2102 16.0602C9.92018 15.7702 9.92018 15.2902 10.2102 15.0002L13.2102 12.0002L10.2102 9.00016C9.92018 8.71016 9.92018 8.23016 10.2102 7.94016C10.5002 7.65016 10.9802 7.65016 11.2702 7.94016L14.8002 11.4702C15.0902 11.7602 15.0902 12.2402 14.8002 12.5302L11.2702 16.0602C11.1202 16.2102 10.9302 16.2802 10.7402 16.2802Z"
-                                                fill="currentColor" />
-                                    </svg>
-                                </div>
-                                <div>
-                                     We uphold the highest standards of honesty and transparency in all our investment services, ensuring our clients can trust us with their financial futures.  
-                                </div>
-                            </div>
-<div class="hstack gap-4">
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                         viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                                d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z"
-                                                fill="currentColor" />
-                                        <path
-                                                d="M10.7402 16.2802C10.5502 16.2802 10.3602 16.2102 10.2102 16.0602C9.92018 15.7702 9.92018 15.2902 10.2102 15.0002L13.2102 12.0002L10.2102 9.00016C9.92018 8.71016 9.92018 8.23016 10.2102 7.94016C10.5002 7.65016 10.9802 7.65016 11.2702 7.94016L14.8002 11.4702C15.0902 11.7602 15.0902 12.2402 14.8002 12.5302L11.2702 16.0602C11.1202 16.2102 10.9302 16.2802 10.7402 16.2802Z"
-                                                fill="currentColor" />
-                                    </svg>
-                                </div>
-                                <div>
-                                     We believe in building strong relationships with our clients and the local community, fostering a supportive environment that enhances everyone's investment experience.  
-                                </div>
-                            </div>
-<div class="hstack gap-4">
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                         viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                                d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z"
-                                                fill="currentColor" />
-                                        <path
-                                                d="M10.7402 16.2802C10.5502 16.2802 10.3602 16.2102 10.2102 16.0602C9.92018 15.7702 9.92018 15.2902 10.2102 15.0002L13.2102 12.0002L10.2102 9.00016C9.92018 8.71016 9.92018 8.23016 10.2102 7.94016C10.5002 7.65016 10.9802 7.65016 11.2702 7.94016L14.8002 11.4702C15.0902 11.7602 15.0902 12.2402 14.8002 12.5302L11.2702 16.0602C11.1202 16.2102 10.9302 16.2802 10.7402 16.2802Z"
-                                                fill="currentColor" />
-                                    </svg>
-                                </div>
-                                <div>
-                                     Our unique setting promotes peace of mind, allowing clients to engage in their investment decisions with clarity and confidence.  
-                                </div>
-                            </div>
-<div class="hstack gap-4">
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                         viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                                d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z"
-                                                fill="currentColor" />
-                                        <path
-                                                d="M10.7402 16.2802C10.5502 16.2802 10.3602 16.2102 10.2102 16.0602C9.92018 15.7702 9.92018 15.2902 10.2102 15.0002L13.2102 12.0002L10.2102 9.00016C9.92018 8.71016 9.92018 8.23016 10.2102 7.94016C10.5002 7.65016 10.9802 7.65016 11.2702 7.94016L14.8002 11.4702C15.0902 11.7602 15.0902 12.2402 14.8002 12.5302L11.2702 16.0602C11.1202 16.2102 10.9302 16.2802 10.7402 16.2802Z"
-                                                fill="currentColor" />
-                                    </svg>
-                                </div>
-                                <div>
-                                     We understand that every client has unique needs; our customized investment strategies are designed to rejuvenate your financial well-being and align with your personal goals.  
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                        <div class="mt-5">
-                            <a href="aboutus.html" class="btn btn-sm btn-primary px-3 d-block d-md-inline-block">
-                                Learn More
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                            d="M12.8584 9.40825L9.32507 5.87492C9.24761 5.79681 9.15544 5.73481 9.05389 5.69251C8.95234 5.6502 8.84342 5.62842 8.73341 5.62842C8.6234 5.62842 8.51448 5.6502 8.41293 5.69251C8.31138 5.73481 8.21921 5.79681 8.14174 5.87492C7.98653 6.03105 7.89941 6.24226 7.89941 6.46242C7.89941 6.68257 7.98653 6.89378 8.14174 7.04992L11.0917 9.99992L8.14174 12.9499C7.98653 13.1061 7.89941 13.3173 7.89941 13.5374C7.89941 13.7576 7.98653 13.9688 8.14174 14.1249C8.21961 14.2022 8.31195 14.2633 8.41349 14.3047C8.51502 14.3462 8.62374 14.3672 8.73341 14.3666C8.84308 14.3672 8.9518 14.3462 9.05333 14.3047C9.15486 14.2633 9.24721 14.2022 9.32507 14.1249L12.8584 10.5916C12.9365 10.5141 12.9985 10.4219 13.0408 10.3204C13.0831 10.2188 13.1049 10.1099 13.1049 9.99992C13.1049 9.88991 13.0831 9.78099 13.0408 9.67944C12.9985 9.57789 12.9365 9.48572 12.8584 9.40825Z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-xl-5 d-none d-lg-block text-center">
-                    <div class="card h-100 border-0 rounded-4 bg-transparent">
-                        <img src="about_us.jpeg" alt="About Us" class="rounded-4 w-100">
-                    </div>
-                </div>
-
-                <div style="display: none">
-
-                    <div class="col-12 bg-light rounded-4 position-relative mt-5 z-1 contact-us-banner">
-                        <div class="mx-2 position-relative">
-                            <div class="bg-light-subtle opacity-25 p-4 p-sm-5 position-absolute rounded-3 w-100">
-                                <span>
-                                    &nbsp;
-                                    <p class="mb-1 d-sm-none">&nbsp;</p>
-                                </span>
-                            </div>
-                        </div>
-                        <div style="height:109px"
-                             class="align-items-center bg-light d-flex justify-content-evenly position-relative p-2 p-sm-3 px-md-5 rounded">
-                            <div>
-                                <h3 class="fs-6 text-capitalize fs-5 mb-0 d-none d-lg-block">Get in Touch with Us</h3>
-                            </div>
-                            <div style="display: none"><a href="contact.html" class="btn btn-sm btn-outline text-capitalize">Contact us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Working Hours -->
-<section id="schedule-section" class="bg-section-light px-3 py-5" style=" display: none">
-    <div class="container-md px-0 px-md-3 py-md-5">
-        <div class="container-sm text-center section-content">
-            <small class="badge py-2 rounded-pill pill-dark text-uppercase fw-medium">Working Hours</small>
-
-            <div class="row justify-content-center mt-3">
-                <div class="col-12 col-md-10 col-lg-8 col-xl-7">
-                    <h2 class="text-capitalize">
-                        Make every hour a productive hour!
-                    </h2>
-                </div>
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-3 g-4 mt-0 mt-md-3 weekly-schedule">
-                <div class="col mx-auto">
-                    <div class="card h-100 bg-transparent text-center border-0">
-                        <p class="fw-light small mb-0">
-                            Monday
-                        </p>
-
-                        <p class="card-title fw-bold mb-0">
-                            {{monday_time}}
-                        </p>
-                    </div>
-                </div>
-                <div class="col mx-auto">
-                    <div class="card h-100 bg-transparent text-center border-0">
-                        <p class="fw-light small mb-0">
-                            Tuesday
-                        </p>
-
-                        <p class="card-title fw-bold mb-0">
-                            {{tuseday_time}}
-                        </p>
-                    </div>
-                </div>
-                <div class="col mx-auto">
-                    <div class="card h-100 bg-transparent text-center border-0">
-                        <p class="fw-light small mb-0">
-                            Wednesday
-                        </p>
-
-                        <p class="card-title fw-bold mb-0">
-                            {{wednesday_time}}
-                        </p>
-                    </div>
-                </div>
-                <div class="col mx-auto">
-                    <div class="card h-100 bg-transparent text-center border-0">
-                        <p class="fw-light small mb-0">
-                            Thursday
-                        </p>
-
-                        <p class="card-title fw-bold mb-0">
-                            {{thursday_time}}
-                        </p>
-                    </div>
-                </div>
-                <div class="col mx-auto">
-                    <div class="card h-100 bg-transparent text-center border-0">
-                        <p class="fw-light small mb-0">
-                            Friday
-                        </p>
-
-                        <p class="card-title fw-bold mb-0">
-                            {{friday_time}}
-                        </p>
-                    </div>
-                </div>
-                <div class="col mx-auto">
-                    <div class="card h-100 bg-transparent text-center border-0">
-                        <p class="fw-light small mb-0">
-                            Saturday
-                        </p>
-
-                        <p class="card-title fw-bold mb-0">
-                            {{staturday_time}}
-                        </p>
-                    </div>
-                </div>
-                <div class="col mx-auto">
-                    <div class="card h-100 bg-transparent text-center border-0">
-                        <p class="fw-light small mb-0">
-                            Sunday
-                        </p>
-
-                        <p class="card-title fw-bold mb-0">
-                            {{sunday_time}}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials -->
-<section id="testimonials-section" class="bg-section-dark px-3 py-5 py-md-4">
-    <div id="testimonials-bg" class="container-md px-0 px-md-3 py-md-5">
-        <div class="container-sm mt-md-2 text-center section-content">
-            <small class="badge py-2 rounded-pill pill-light text-uppercase fw-medium">Quotes</small>
-        </div>
-
-        <!-- set/remove `data-bs-ride` attribute to start/stop `autoplay` -->
-        <!-- set/remove `data-bs-interval` attribute to define delay between `slides` - 3000 = 3 seconds -->
-        <div id="testimonialsCarousel" class="carousel slide testimonials-carousel" data-bs-ride="carousel"
-             data-bs-interval="3000">
-            <div class="carousel-inner">
-                <!-- the first item/slide must have the `active` class -->
-                <div class="carousel-item active">
-    <div class="px-3 text-center">
-        <div  class="quote-container display-6 fw-bold mx-lg-5 pt-4 testimonial-content">
-             "The investment services provided by Abbey are top-notch. Their team is knowledgeable and always ready to help me make informed decisions. Highly recommend!"  
-        </div>
-        <div class="mt-5">
-            <div class="card-icon mx-auto" style="display: none">
-                <img src="" alt=" Sarah J."
-                     width="80" height="80" class="rounded-circle">
-            </div>
-            <div class="customer-name mt-3">
-                <a class="customer-name" style="text-decoration: none" href="" target="_blank"> Sarah J.</a>
-
-            </div>
-            <div class="customer-name">
-                <div class="elementor-star-rating">
-                    
-                </div>
-            </div>
-            <div class="customer-name">
-                <span
-                        class="rounded-circle border-0 vstack justify-content-center align-items-center z-3">
-                                             <img style=" width: 30px; height: 30px; padding: 4px" src="home/media/imgs/icon/google.png" alt="google-review"
-                                                  class="rounded-circle">
-                </span>
-            </div>
-        </div>
-    </div>
-</div><div class="carousel-item">
-    <div class="px-3 text-center">
-        <div  class="quote-container display-6 fw-bold mx-lg-5 pt-4 testimonial-content">
-             "I'm so impressed with Abbey's investment strategies! They've helped me grow my portfolio significantly, and their personalized approach sets them apart from the rest."  
-        </div>
-        <div class="mt-5">
-            <div class="card-icon mx-auto" style="display: none">
-                <img src="" alt=" Mark T."
-                     width="80" height="80" class="rounded-circle">
-            </div>
-            <div class="customer-name mt-3">
-                <a class="customer-name" style="text-decoration: none" href="" target="_blank"> Mark T.</a>
-
-            </div>
-            <div class="customer-name">
-                <div class="elementor-star-rating">
-                    
-                </div>
-            </div>
-            <div class="customer-name">
-                <span
-                        class="rounded-circle border-0 vstack justify-content-center align-items-center z-3">
-                                             <img style=" width: 30px; height: 30px; padding: 4px" src="home/media/imgs/icon/google.png" alt="google-review"
-                                                  class="rounded-circle">
-                </span>
-            </div>
-        </div>
-    </div>
-</div><div class="carousel-item">
-    <div class="px-3 text-center">
-        <div  class="quote-container display-6 fw-bold mx-lg-5 pt-4 testimonial-content">
-             "Abbey offers exceptional investment services! Their experts take the time to understand my goals, and I've seen fantastic results. Truly a reliable partner!"  
-        </div>
-        <div class="mt-5">
-            <div class="card-icon mx-auto" style="display: none">
-                <img src="" alt=" Emily R."
-                     width="80" height="80" class="rounded-circle">
-            </div>
-            <div class="customer-name mt-3">
-                <a class="customer-name" style="text-decoration: none" href="" target="_blank"> Emily R.</a>
-
-            </div>
-            <div class="customer-name">
-                <div class="elementor-star-rating">
-                    
-                </div>
-            </div>
-            <div class="customer-name">
-                <span
-                        class="rounded-circle border-0 vstack justify-content-center align-items-center z-3">
-                                             <img style=" width: 30px; height: 30px; padding: 4px" src="home/media/imgs/icon/google.png" alt="google-review"
-                                                  class="rounded-circle">
-                </span>
-            </div>
-        </div>
-    </div>
+<div class="col-12">
+    <hr class="hr-border my-5">
 </div>
-
-            </div>
-
-            <div class="carousel-indicators position-relative m-0 mt-4">
-                <!-- the first button/indicator must have the `active` class -->
-                <!-- set `data-bs-slide-to` attribute for jump to a specific slide, values must start with `0` -->
-                <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Testimonial 0"></button><button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1"
-                        aria-current="true" aria-label="Testimonial 1"></button><button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="2"
-                        aria-current="true" aria-label="Testimonial 2"></button>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Blog -->
-<section id="blog-section" class="bg-section-dark px-3 py-5">
-    <div class="container-md px-0 px-md-3 py-md-5">
-        <div class="container-sm mb-5 text-center section-content">
-            <small class="badge py-2 rounded-pill pill-light text-uppercase fw-medium">Blog</small>
-        </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-5">
-            <div class="col-lg-4">
-    <a href="what-does-an-investment-service-do.html" class="text-decoration-none">
-        <div class="card h-100 gradient-card is-hoverable border-0">
-            <img src="what-does-an-investment-service-do-309583.jpg?key=ujxLco" class="img-fluid rounded" alt="What does an investment service do?">
-
-            <div class="card-body p-3 pb-0">
-                <h3 class="fs-5 mb-3 fw-semibold text-capitalize card-title">What does an investment service do?</h3>
-
-                <p>
-                    The regulatory framework for investment services plays a crucial role in maintaining market integrity and protecting investors. Various government agencies and independent regulatory bodies oversee the operations of these services to ensure complianc......
-                </p>
-            </div>
-
-            <div class="card-footer p-3 bg-transparent border-0" style="display: {{show_date_auth_section}}">
-                <div
-                        class="align-items-center d-flex justify-content-between position-relative rounded">
-                    <div class="hstack gap-3">
-                        <div class="vstack my-auto card-title blog-card-stats">
-                            <small class="h6 fw-semibold text-capitalize card-title" style="display: none">
-                                
-                            </small>
-
-                            <small class="fw-normal card-title" style="display: inline">
-                                2024-11-01
-                            </small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
+<div class="col-12 mt-5 mt-md-0 mt-lg-4 mt-xl-5">
+    <H2>Regulatory Framework for <a href='investment-services.html'>Investment Services</a></H2><p>The regulatory framework for investment services plays a crucial role in maintaining market integrity and protecting investors. Various government agencies and independent regulatory bodies oversee the operations of these services to ensure compliance with financial laws and regulations. This framework includes strict guidelines regarding transparency, reporting, and the handling of client funds. Such measures aim to cultivate trust in the financial system and to mitigate the risks associated with fraudulent practices.<br/><br/>Investment services must adhere to a range of regulations that vary by jurisdiction. These regulations cover aspects such as licensing requirements for financial professionals, disclosure obligations, and anti-money laundering measures. Failing to comply with these regulatory standards can lead to penalties or even the revocation of licenses. Thus, understanding the regulatory landscape is essential for both providers and consumers of investment services.</p><H3>Compliance and Oversight</H3><p>Investment services operate under a strict regulatory framework designed to protect investors and maintain the integrity of financial markets. Regulatory bodies, such as the Securities and Exchange Commission (SEC) in the United States, lay out guidelines that investment firms must follow. These regulations cover various aspects, including reporting requirements, disclosure of fees, and the ethical conduct of advisors. Compliance with these rules is essential for sustaining trust between investors and service providers.<br/><br/>Oversight mechanisms ensure that investment services adhere to established standards and practices. Independent audits and examinations help identify potential discrepancies or areas for improvement. Many firms also implement internal compliance programs to monitor their activities continuously. This proactive approach not only aids in meeting regulatory requirements but also enhances the overall reliability of the investment services industry.</p><H2>Assessing Investment Risk</H2><p>Investment risk assessment is a crucial element in the investment process. Investment services often begin by evaluating market conditions, economic indicators, and trends that could impact asset performance. Understanding these factors helps clients make informed decisions, ultimately aiming to align their portfolios with their financial goals. A comprehensive risk assessment allows for effective planning, mitigating potential losses while capitalizing on opportunities that may arise in the market.<br/><br/>Identifying an investor’s risk tolerance plays a significant role in assessing investment risk. Investment services typically utilize questionnaires and discussions to gauge an investor's comfort level with various levels of risk. This tailored approach enables advisors to create personalized investment profiles that reflect individual preferences and objectives. By conducting a thorough assessment, investment services can guide clients towards suitable asset allocations and investment strategies that match their overall financial aspirations.</p><H3>Risk Tolerance and Investment Profiles</H3><p>Understanding risk tolerance is essential for creating a personalized investment profile. Individuals have different capacities for risk based on factors such as age, financial situation, and investment goals. Investment services often assess these factors through questionnaires or discussions to determine an investor’s comfort level with potential losses and market fluctuations. This assessment allows investment advisors to tailor strategies that align with the client’s unique profile, ensuring that investment choices match their financial aspirations.<br/><br/>Investment profiles also encompass specific objectives that influence decision-making. For instance, some investors may prioritize long-term growth, while others focus on preserving capital or generating income through dividends. Investment services use detailed profiles to recommend suitable assets, balancing risk with the investor's required return. By taking into account both risk tolerance and investment objectives, advisors can construct diversified portfolios that are strategically aligned with the client's expectations and phase of life.</p><H2>The Importance of Research and Analysis</H2><p>Investment services rely heavily on thorough research and analysis to ensure informed decision-making. Without understanding market trends, economic indicators, and company performance, investors may face significant risks that could be mitigated with proper information. Research helps identify viable investment opportunities, assess their potential returns, and evaluate associated risks. This groundwork is crucial for developing strategies tailored to individual investor needs.<br/><br/>In addition to forming a basis for investment decisions, research also encompasses both fundamental and technical analysis. Fundamental analysis delves into a company's financial health, exploring earnings reports, growth potential, and industry conditions. Technical analysis, on the other hand, focuses on price movements and trading volume, aiming to identify patterns that can signal future behavior in the market. Both approaches are essential tools within investment services, providing a comprehensive view that enhances investment strategies.</p><H3>Fundamental vs. Technical Analysis</H3><p>Fundamental analysis focuses on evaluating a company's intrinsic value by examining its financial statements, management team, industry position, and overall economic conditions. Investment services often rely on this type of analysis to inform clients about the potential for long-term investment returns. By understanding the underlying factors that contribute to a company's value, investors can make more informed decisions about where to allocate their resources.<br/><br/>Technical analysis, on the other hand, involves analyzing historical price movements and trading volumes to predict future market behavior. Investment services utilize this method to identify patterns and trends that may indicate when to buy or sell a security. Investors who prefer a more data-driven approach may lean towards technical analysis, as it emphasizes market psychology and investor sentiment rather than company fundamentals. Both strategies can complement each other, offering a holistic view of investment opportunities.</p><h2>FAQS</h2><h3>What is an investment service?</h3><p>An investment service is a professional service that assists individuals and institutions in managing their investment portfolios, providing advice on buying and selling financial assets, and helping clients achieve their financial goals.</p><h3>How do investment services ensure compliance with regulations?</h3><p>Investment services operate under a regulatory framework that includes compliance and oversight by regulatory bodies to ensure they adhere to laws and regulations designed to protect investors and maintain the integrity of financial markets.</p><h3>What factors are considered when assessing investment risk?</h3><p>Investment risk is assessed based on various factors, including market conditions, historical performance, economic indicators, and individual risk tolerance, which helps in determining suitable investment strategies.</p><h3>What is the difference between fundamental and technical analysis?</h3><p>Fundamental analysis involves evaluating a company's financial health and market position to determine its investment potential, while technical analysis focuses on statistical trends and price movements in the market to forecast future performance.</p><h3>How can I determine my risk tolerance for investments?</h3><p>Determining your risk tolerance involves assessing your financial situation, investment goals, time horizon, and emotional capacity to handle market fluctuations, often through questionnaires or discussions with financial advisors.</p>
 </div>
-
-        </div>
-
-        <div class="mt-5 text-center">
-            <a href="blog.html" class="btn btn-sm btn-primary d-block d-md-inline-block px-3">
-                View All
-            </a>
         </div>
     </div>
 </section>
+
+
 
 
 <!-- Locations -->
@@ -863,14 +439,41 @@ At Website Development, we pride ourselves on our commitment to exceptional cust
     </div>
 </section>
 
+<!-- Related Services -->
+<section id="related-section" class="bg-section-light px-3 py-5" style="display: inherit">
+    <div class="container-md px-0 px-md-3 py-md-5">
+        <div class="container-sm mb-5 text-center section-content">
+            <h3 class="text-capitalize mb-0">
+                Related Links
+            </h3>
+        </div>
+
+        <div class="row g-4 mt-md-5">
+            <div class="col-12 col-lg-6">
+                <div class="card h-100 bg-section-dark">
+                    <div class="card-body p-2 position-relative">
+                        <div class="hstack gap-3 align-items-center">
+                            <img src="https://pub-e56f2acf5b414006945a555a9a7151c0.r2.dev/Website-Development-9545_ODc0Ng==/investment-services-309578.jpg?key=xfOIQ7" alt="Investment Services" class="rounded"
+                                 width="80" height="80">
+                            <a href="investment-services.html" class="h5 card-title mb-0 fw-semibold text-capitalize text-decoration-none stretched-link align-self-center">
+                                Investment Services
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Quotation Form -->
 
 
-<section class="bg-section-dark px-3 py-5 ">
-    <div class="ql-editor mb-4 " style="display:none">
-        
-    </div>
-    <div class="pb-5 ql-editor " id="sitewide-footer" style="display:none">
+
+
+
+<section class="bg-section-dark px-3 py-5 " style="display:none">
+    <div class="pb-5 ql-editor " id="sitewide-footer" >
         
     </div>
 </section>
@@ -983,12 +586,27 @@ At Website Development, we pride ourselves on our commitment to exceptional cust
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
 </script>
-
-<!-- Owl Carousel CDN -->
-<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- Custom JS -->
 <script>
+
+    function openModal(imageElement) {
+        let modal = document.getElementById("imageModal");
+        // const zoomedImage = document.getElementById("zoomed_image");
+        // zoomedImage.src = imageElement.src;
+        var modalImg = document.getElementById("zoomed_image");
+        modal.style.display = "block";
+        modalImg.src = imageElement.src;
+
+// Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+    }
+    function closeModal(){
+        let modal = document.getElementById("imageModal");
+        modal.style.display = "none";
+    }
     // perform `js` actions
     document.addEventListener("DOMContentLoaded", function () {
         // add `sticky` styles to `navbar`
@@ -1006,21 +624,55 @@ At Website Development, we pride ourselves on our commitment to exceptional cust
             'fixed-top'): topNavbar.classList.remove('bg-dark', 'navbar-border', 'border-bottom',
             'fixed-top');
     });
-    document.addEventListener('DOMContentLoaded', function() {
-        const quoteContainers = document.querySelectorAll('.quote-container');
-
-        quoteContainers.forEach(container => {
-            const quote = container.textContent.trim();
-
-            if (quote.length > 100) {
-                container.classList.remove('display-6');
-                container.classList.add('display-7');
-            }
-        });
-    });
 
     // perform `jQuery` actions
     $(document).ready(function () {
+        const section = document.getElementById('service-details');
+        if (section && section.innerText.trim() === '') {
+            section.style.display = 'none';
+        }
+
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 9000,
+            },
+            slidesPerView: 3,
+            spaceBetween: 10,
+            breakpoints: {
+
+                200: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                1500: {
+                    slidesPerView: 5,
+                    spaceBetween: 10,
+                },
+                930: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                }
+            },
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            // Navigation arrows
+            navigation: {
+                enabled: true,
+                nextEl: '.swiper-button-next-new',
+                prevEl: '.swiper-button-prev-new',
+            },
+
+            // And if we need scrollbar
+            keyboard:true
+        });
+
 
         // toggle `faq-card` visibility based on screen size
         const cardContainer = $('#faqsCardContainer');
@@ -1075,46 +727,6 @@ At Website Development, we pride ourselves on our commitment to exceptional cust
         $(window).on('resize', function () {
             toggleCards();
         });
-        var onMultiple = $(".owl-carousel div").length > 3 ? true : false;
-
-        // Services carousel
-        $(".owl-carousel").owlCarousel({
-            loop: onMultiple,
-            margin: 20,
-            nav: true,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            smartSpeed: 1000,
-            autoplayHoverPause: true,
-            center: true,
-            navText: [
-                '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="PreviousSlide" aria-labelledby="PreviousSlide" fill="none"> <path d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z" fill="#A9B2B7" /> <path d="M13.2599 16.2802C13.0699 16.2802 12.8799 16.2102 12.7299 16.0602L9.19992 12.5302C8.90992 12.2402 8.90992 11.7602 9.19992 11.4702L12.7299 7.94016C13.0199 7.65016 13.4999 7.65016 13.7899 7.94016C14.0799 8.23016 14.0799 8.71016 13.7899 9.00016L10.7899 12.0002L13.7899 15.0002C14.0799 15.2902 14.0799 15.7702 13.7899 16.0602C13.6499 16.2102 13.4599 16.2802 13.2599 16.2802Z" fill="#A9B2B7" /> </svg>',
-                '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" id="NextSlide" aria-labelledby="NextSlide"> <path d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z" fill="#A9B2B7" /> <path d="M10.7402 16.2802C10.5502 16.2802 10.3602 16.2102 10.2102 16.0602C9.92018 15.7702 9.92018 15.2902 10.2102 15.0002L13.2102 12.0002L10.2102 9.00016C9.92018 8.71016 9.92018 8.23016 10.2102 7.94016C10.5002 7.65016 10.9802 7.65016 11.2702 7.94016L14.8002 11.4702C15.0902 11.7602 15.0902 12.2402 14.8002 12.5302L11.2702 16.0602C11.1202 16.2102 10.9302 16.2802 10.7402 16.2802Z" fill="#A9B2B7" /> </svg>'
-            ],
-            onInitialize: function (e) {
-                // $(".owl-carousel div").length <= 3 && (this.settings.loop = !1)
-            },
-            responsive: {
-                0: {
-                    items: 1
-                },
-                768: {
-                    items: 2,
-                    margin: 48
-                },
-                1200: {
-                    items: 3,
-                    margin: 52
-                }
-            }
-        });
-        if(!onMultiple){
-            document.getElementsByClassName("owl-stage")[0].style.transform = "translate3d(0px, 0px, 0px)";
-            document.getElementsByClassName("owl-stage")[0].style.width = "100%";
-            document.getElementsByClassName("owl-item")[0].style.width = "100%";
-            document.querySelector('.owl-item').querySelector('.card').style.transform = "scale(1.0)";
-        }
     });
 </script>
 <script>
